@@ -3,7 +3,7 @@
 # Tên của file mô phỏng đầu ra
 OUT = simulation
 # Các file nguồn Verilog
-SRC_FILES = syn_fifo.v
+SRC_FILES = ../rtl/syn_fifo.v
 TB_FILE = syn_fifo_tb.v
 # File sóng để dùng trong GTKWave
 WAVEFORM = wave.vcd

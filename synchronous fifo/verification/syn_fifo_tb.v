@@ -51,7 +51,7 @@ module syn_fifo_tb;
     for (integer i = 0; i < 30; i = i + 1) begin
       @(posedge clk);
       data_in = $urandom % 50;
-      if(i == 20) write_en = ~write_en;
+      if(i == 10) write_en = ~write_en;
       else write_en = 1;
       #1;
       if (!full && write_en) begin

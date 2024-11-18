@@ -50,7 +50,7 @@ module asyn_fifo #(
         .empty(empty)
     );
      //Synchronizer from write domain to read domain
-    sync_2flops #(.DATASIZE(ADDRSIZE+1)) sync_rd2wr(
+    sync_2flops #(.DATASIZE(ADDRSIZE+1)) sync_wr2rd(
         .clk(rd_clk),
         .rst(rd_rst),
         .data_in(wr_gray_ptr),
@@ -66,6 +66,12 @@ module asyn_fifo #(
         .full(full),
         .wr_addr(wr_addr),
         .rd_addr(rd_addr),
+        .rd_clk(rd_clk),
+        .rd_en(rd_en),
+        .empty(empty),
         .data_out(data_out)
     );
 endmodule
+
+
+

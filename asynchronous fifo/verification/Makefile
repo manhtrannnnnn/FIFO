@@ -3,8 +3,9 @@
 # Tên của file mô phỏng đầu ra
 OUT = simulation
 # Các file nguồn Verilog
-SRC_FILES = ../rtl/bin2gray.v
-TB_FILE = bin2gray_tb.v
+SRC_DIR = ../rtl
+SRC_FILES = $(wildcard $(SRC_DIR)/*.v)
+TB_FILE = asyn_fifo_tb.v
 # File sóng để dùng trong GTKWave
 WAVEFORM = wave.vcd
 

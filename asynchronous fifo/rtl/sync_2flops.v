@@ -7,7 +7,7 @@ module sync_2flops #(
 );
     reg [DATASIZE-1:0] data_tmp;
     always @(posedge clk) begin
-        if(rst) begin
+        if(!rst) begin
             data_tmp <= 0;
             data_out <= 0;
         end
